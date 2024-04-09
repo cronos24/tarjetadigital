@@ -51,7 +51,7 @@ const Home = () => {
                                 </div>
                             </div>
 
-                            <div className='col-12' style={{ height: '35%' }}>
+                            <div className='col-12 pt-4' style={{ height: '35%' }}>
                                 <div className='grid h-full min-h-full'>
                                     <div className='col-6 flex justify-content-star align-items-center'>
                                         <div className='grid'>
