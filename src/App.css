@@ -12,7 +12,7 @@ body,
   min-width: 100%;
   margin: 0;
   padding: 0;
-  background: var(--ng-blanco);
+  background: '#ffffff';
   /* font-family: "Open Sans", sans-serif; */
   white-space: normal !important;
   display: flex;
@@ -166,5 +166,11 @@ body,
   .img-height-tarjeta {
     height: 40px;
     /* Altura para pantallas grandes */
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .p-menubar .p-menubar-button {
+    display: none;    
   }
 }

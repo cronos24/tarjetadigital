@@ -70,7 +70,7 @@ const NavigationBar = () => {
                     <div className='col-12'>
                         <Messages ref={msgs} />
                     </div>
-                    <div className='col-12'>
+                    <div className='col-12'>    
                         <Card title="Alerta 1">
                             <div className='grid'>
                                 <div className='col-12 p-0'>
