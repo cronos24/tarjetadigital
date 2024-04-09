@@ -40,7 +40,7 @@ const Home = () => {
 
                 </div>
                 <div className='col-12 flex justify-content-center align-content-center lg:pt-5'>
-                    <Card title="" className='w-11 md:w-7 lg:w-3 h-16rem md:h-18rem lg:h-18rem tarjeta'>
+                    <Card title="" className='w-11 sm:w-11 md:w-8 lg:w-3 h-16rem md:h-18rem lg:h-18rem tarjeta'>
                         <div className='grid px-3 md:px-4 lg:px-4 h-full min-h-full'>
                             <div className='col-12 flex justify-content-star align-items-center' style={{ height: '30%' }}><img alt="logotarjeta" src={imLogoTarjeta} className='img-height-tarjeta'></img></div>
 

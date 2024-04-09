@@ -1,6 +1,5 @@
 :root {
   /*--ng-primario: #0099CC;*/
-
 }
 
 html,
@@ -12,7 +11,7 @@ body,
   min-width: 100%;
   margin: 0;
   padding: 0;
-  background: '#ffffff';
+  background: #FFFFFF !important;
   /* font-family: "Open Sans", sans-serif; */
   white-space: normal !important;
   display: flex;
