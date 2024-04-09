@@ -61,7 +61,7 @@ const Home = () => {
                                     </div>
                                     <div className='col-6 flex justify-content-end align-items-center'>
                                         <div className='grid'>
-                                            <div className='col-12 p-0 flex justify-content-center align-items-center'><img alt="logo" src={imMoneda} height="20" className="mx-2"></img></div>
+                                            <div className='col-12 p-0 flex justify-content-center align-items-center'><img alt="logo" src={imMoneda} height="30" className="mx-2"></img></div>
                                             <div className='col-12 p-0 pt-2 flex justify-content-center'><span className='text-card3'>TARJETA DIGITAL</span></div>
                                         </div>
                                     </div>
