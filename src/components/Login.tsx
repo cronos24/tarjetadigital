@@ -30,9 +30,9 @@ const Login = () => {
         <div className='w-full p-3'>
             <div className="grid">
                 <div className='col-12 flex justify-content-center align-content-center lg:pt-8'>
-                    <Card title="" className='w-11 sm:w-11 md:w-11 lg:w-5 h-18rem md:h-18rem lg:h-30rem' style={{ border: '1px solid black' }}>
+                    <Card title="" className='w-11 sm:w-11 md:w-11 lg:w-5 h-19rem md:h-18rem lg:h-30rem' style={{ border: '1px solid black' }}>
                         <div className='grid flex flex-column text-black-alpha-90 lg:pt-6'>
-                            <div className='col-12 text-xl font-bold lg:text-4xl flex align-items-center justify-content-center'>Consulta el saldo de tu tarjeta digital</div>
+                            <div className='col-12 text-xl font-bold lg:text-4xl flex align-items-center justify-content-center text-center'> Consulta el saldo de tu tarjeta digital</div>
                             <div className='col-12 text-sm lg:text-base flex align-items-center justify-content-center'>Ingresar Número de Placa:</div>
                             <div className='col-12 flex align-items-center justify-content-center'>
                                 <InputText value={value} className='w-6 h-5rem lg:w-3 lg:h-5rem border-2 border-900 text-5xl text-900' style={{ backgroundColor: '#fcdc14' }} onChange={handleChange}
