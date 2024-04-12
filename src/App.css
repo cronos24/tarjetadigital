@@ -37,11 +37,10 @@ body,
 }
 
 .footer {
-  height: 10%;
+  height: auto;
   background-image: url('./assets/image/rojopasi.jpg');
   color: white;
   text-align: center;
-  padding: 10px;
 }
 
 ::-webkit-scrollbar {
