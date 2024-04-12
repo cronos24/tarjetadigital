@@ -14,7 +14,25 @@ function App() {
 
   return (
     <>
-      <div className='grid w-full p-0 initial-container'>
+
+      <div className="page-container"> {/* Contenedor principal con flexbox */}
+        <BrowserRouter>
+          <header className="header">
+            <NavigationBar />
+          </header>
+
+          {/* Contenido Principal */}
+          <main className="content">
+            <Routes>
+              <Route path="/" element={<Login />} />
+              <Route path="/Home" element={<Home />} />
+            </Routes>
+          </main>
+        </BrowserRouter>
+        {/* Footer */}
+        <Footer />
+      </div>
+      {/* <div className='grid w-full p-0 initial-container'>
 
         <BrowserRouter>
           <div className='col-12 p-0'>
@@ -29,7 +47,7 @@ function App() {
         </BrowserRouter>
         <Footer />
 
-      </div>
+      </div> */}
     </>
   )
 }

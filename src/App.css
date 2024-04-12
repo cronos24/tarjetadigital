@@ -14,12 +14,35 @@ body,
   background: #FFFFFF !important;
   /* font-family: "Open Sans", sans-serif; */
   white-space: normal !important;
-  display: flex;
-  justify-content: center;
-  align-items: start;
-  flex-direction: column;
 }
 
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Altura mínima del contenedor principal */
+}
+
+.header {
+  height: auto;
+  background: transparent;
+  color: white;
+  text-align: center;
+}
+
+.content {
+  flex: 1; /* Crece para ocupar todo el espacio disponible */
+  padding: 10px;
+  background: #f1f1f1;
+  overflow-y: auto; /* Habilita scroll si es necesario */
+}
+
+.footer {
+  height: 10%;
+  background-image: url('./assets/image/rojopasi.jpg');
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
 
 ::-webkit-scrollbar {
   width: 0.4em !important;
@@ -67,8 +90,7 @@ body,
 }
 
 .menubarcustom {
-  /* background-image: url('./assets/image/BG.svg'); */
-  background-image: radial-gradient(circle at center, #990100, #990100);
+  background-image: url('./assets/image/rojopasi.jpg');
   /* O ajusta según tus preferencias */
   border-radius: 0;
   color: #ffffff;
@@ -149,8 +171,7 @@ body,
 }
 
 .tarjeta.p-card {
-  /* background-image: url('./assets/image/card.png'); */
-  background-image: radial-gradient(circle at center, #990100, #990100);
+  background-image: url('./assets/image/rojopasi.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -195,5 +216,14 @@ body,
 }
 
 .elemento-gradiente-radial {
-  background-image: radial-gradient(circle at center, #990100, #ffffff);
+  background-image: url('./assets/image/rojopasi.jpg');
+}
+
+.bienvenida-mensaje {
+  color: black;
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 50px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
 }

@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer: React.FC = () => {
     return (
-        <footer className="footer bg-dark text-white p-3 text-center" style={{ background: '#990100', width: '100%' }}>
+        <footer className="footer">
             <div className='grid text-sm'>
                 <div className='col-12 lg:col-3 flex justify-content-center align-content-center'>
                     Neiva - Huila <br />
