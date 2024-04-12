@@ -6,23 +6,29 @@ import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './components/Home';
 import NavigationBar from './components/common/NavigationBar';
+import Login from './components/Login';
+import Footer from './components/common/Footer';
 
 function App() {
 
 
   return (
     <>
-      <div className='grid w-full p-0'>
-        <div className='col-12 p-0'>
-          <NavigationBar />
-        </div>
-        <div className='col-12'>
-          <BrowserRouter>
+      <div className='grid w-full p-0 initial-container'>
+
+        <BrowserRouter>
+          <div className='col-12 p-0'>
+            <NavigationBar />
+          </div>
+          <div className='col-12 flex-grow-1'>
             <Routes>
-              <Route path="/" element={<Home />} />
+              <Route path="/" element={<Login />} />
+              <Route path="/Home" element={<Home />} />
             </Routes>
-          </BrowserRouter>
-        </div>
+          </div>
+        </BrowserRouter>
+        <Footer />
+
       </div>
     </>
   )

@@ -9,10 +9,14 @@ import { Messages } from 'primereact/messages';
 import { useRef, useEffect } from 'react';
 import { useMountEffect } from 'primereact/hooks';
 import { Toast } from 'primereact/toast';
+import { useLocation } from 'react-router-dom';
+import imMoneda from "../../assets/image/moneda.png";
 
 const NavigationBar = () => {
     const [visibleRight, setVisibleRight] = useState<boolean>(false);
     const msgs = useRef<Messages>(null);
+    const location = useLocation();
+    const isHomeRoute = location.pathname === '/Home';
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const itemRenderer = function (item: any) {
         return (
@@ -27,7 +31,7 @@ const NavigationBar = () => {
 
     const toast = useRef<Toast>(null);
 
-    useMountEffect(() => {        
+    useMountEffect(() => {
         toast.current?.show({ severity: 'info', summary: 'Mounted', sticky: true });
     });
 
@@ -49,7 +53,6 @@ const NavigationBar = () => {
             template: itemRenderer,
             command: () => { window.location.hash = "/"; }
         },
-        // Agrega más elementos según sea necesario
     ];
 
 
@@ -57,7 +60,11 @@ const NavigationBar = () => {
     const start = <img alt="logo" src={imLogo} height="40" className="mr-2"></img>;
     const end = (
         <div className="flex align-items-center gap-2">
-            <Button icon="pi pi-bell" rounded text severity="warning" aria-label="Notification" className='p-button p-component p-button-icon-only p-button-text p-button-rounded p-button-warning' badge="8" onClick={() => setVisibleRight(true)} />
+            {isHomeRoute ? (
+                <Button icon="pi pi-bell" rounded text severity="warning" aria-label="Notification" className='p-button p-component p-button-icon-only p-button-text p-button-rounded p-button-warning' badge="8" onClick={() => setVisibleRight(true)} />
+            ) : (
+                <img alt="Otra Imagen" src={imMoneda}  height="35"/>
+            )}
         </div>
     );
 
@@ -70,7 +77,7 @@ const NavigationBar = () => {
                     <div className='col-12'>
                         <Messages ref={msgs} />
                     </div>
-                    <div className='col-12'>    
+                    <div className='col-12'>
                         <Card title="Alerta 1">
                             <div className='grid'>
                                 <div className='col-12 p-0'>
