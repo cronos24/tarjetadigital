@@ -16,7 +16,7 @@ const Home = () => {
                         <span className='text-titulo flex justify-content-center align-content-center'>¡Bienvenido!</span>
                         <p className='text-subtitulo flex justify-content-center align-content-center text-center'>Conozca los beneficios exclusivos que tenemos para ti</p>
                     </div>
-                    <div className="col-12 md:px-5 lg:px-5">
+                    <div className="col-12 md:col-8 md:col-offset-2 lg:col-8 lg:col-offset-2 md:px-5 lg:px-5">
                         <div className='grid'>
                             <div className='col-12 md:col-4 lg:col-4'>
                                 <Card title="" className='card-items pl-2' style={{ background: '#121D37 0% 0% no-repeat padding-box', border: '1px solid #2D457F', borderRadius: '10px', color: '#ffffff', height: '40px' }}>
