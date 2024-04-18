@@ -11,6 +11,7 @@ import { useMountEffect } from 'primereact/hooks';
 import { Toast } from 'primereact/toast';
 import { useLocation } from 'react-router-dom';
 import imMoneda from "../../assets/image/moneda.png";
+import { useNavigate } from 'react-router-dom';
 
 const NavigationBar = () => {
     const [visibleRight, setVisibleRight] = useState<boolean>(false);
@@ -28,7 +29,7 @@ const NavigationBar = () => {
             </a>
         );
     };
-
+    const navigate = useNavigate();
     const toast = useRef<Toast>(null);
 
     useMountEffect(() => {
@@ -55,13 +56,18 @@ const NavigationBar = () => {
         },
     ];
 
-
+    const logOut = () => {
+        navigate('/');
+    };
 
     const start = <img alt="logo" src={imLogo} height="40" className="mr-2"></img>;
     const end = (
         <div className="flex align-items-center gap-2">
             {isHomeRoute ? (
+                <>
                 <Button icon="pi pi-bell" rounded text severity="warning" aria-label="Notification" className='p-button p-component p-button-icon-only p-button-text p-button-rounded p-button-warning' badge="8" onClick={() => setVisibleRight(true)} />
+                <Button icon="pi pi-power-off" rounded text severity="warning" aria-label="Notification" className='p-button p-component p-button-icon-only p-button-text p-button-rounded p-button-warning' onClick={() => logOut()} />
+                </>
             ) : (
                 <img alt="Otra Imagen" src={imMoneda}  height="35"/>
             )}
