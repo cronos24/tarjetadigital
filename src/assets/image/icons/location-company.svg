@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="18.857" height="24" viewBox="0 0 18.857 24">
+  <g id="location-company" transform="translate(-30 -12)">
+    <path id="Trazado_5017" data-name="Trazado 5017" d="M39.429,36,32.2,27.472q-.151-.192-.3-.387A9.333,9.333,0,0,1,30,21.429a9.429,9.429,0,1,1,18.857,0,9.329,9.329,0,0,1-1.9,5.655v0s-.257.338-.3.383Zm-6.161-9.947s.2.264.246.321l5.915,6.976,5.923-6.986c.038-.047.238-.313.239-.314a7.629,7.629,0,0,0,1.552-4.622,7.714,7.714,0,0,0-15.429,0,7.633,7.633,0,0,0,1.554,4.624Z" transform="translate(0)" fill="#f8faff"/>
+    <path id="Trazado_5018" data-name="Trazado 5018" d="M74.571,56.571H72.857V49.714H67.714v6.857H66V49.714A1.716,1.716,0,0,1,67.714,48h5.143a1.716,1.716,0,0,1,1.714,1.714Z" transform="translate(-30.857 -30.857)" fill="#f8faff"/>
+    <path id="Trazado_5019" data-name="Trazado 5019" d="M90,96h1.714v1.714H90Z" transform="translate(-51.429 -72)" fill="#f8faff"/>
+    <path id="Trazado_5020" data-name="Trazado 5020" d="M90,72h1.714v1.714H90Z" transform="translate(-51.429 -51.429)" fill="#f8faff"/>
+  </g>
+</svg>

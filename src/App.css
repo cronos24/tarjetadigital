@@ -19,7 +19,8 @@ body,
 .page-container {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Altura mínima del contenedor principal */
+  min-height: 100vh;
+  /* Altura mínima del contenedor principal */
 }
 
 .header {
@@ -30,17 +31,75 @@ body,
 }
 
 .content {
-  flex: 1; /* Crece para ocupar todo el espacio disponible */
+  flex: 1;
+  /* Crece para ocupar todo el espacio disponible */
   padding: 10px;
-  background: #f1f1f1;
-  overflow-y: auto; /* Habilita scroll si es necesario */
+  overflow-y: auto;
+  /* Habilita scroll si es necesario */
+  background-image: url('./assets/image/BG.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.text-titulo {
+  font: normal normal bold 35px/36px Helvetica Neue;
+  letter-spacing: 0px;
+  color: #121D37;
+}
+
+.text-subtitulo {
+  font: normal normal normal 15px/17px Helvetica Neue;
+  letter-spacing: 0px;
+  color: #707070;
+}
+
+.text-card-1-1 {
+  font: normal normal 20px/13px Proxima Nova;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+}
+
+.text-card-1-2 {
+  font: normal normal bold 20px/13px Proxima Nova;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+}
+
+.text-card-2-1 {
+  font: normal normal 14px/13px Proxima Nova;
+  letter-spacing: 0px;
+  color: #918E8D;
+}
+
+.text-card-2-2 {
+  font: normal normal medium 14px/13px Proxima Nova;
+  letter-spacing: 0px;
+  color: #121D37;
 }
 
 .footer {
   height: auto;
-  background-image: url('./assets/image/rojopasi.jpg');
-  color: white;
-  text-align: center;
+  /* background-image: url('./assets/image/rojopasi.jpg'); */
+  background: #121D37;
+  font: normal normal 300 14px/19px Helvetica Neue;
+  letter-spacing: 0px;
+  color: #F8FAFF;
+}
+
+.card-login.p-card .p-card-body {
+  padding: 0;
+  height: 100%;
+}
+
+.card-login.p-card .p-card-content {
+  padding: 0 0;
+  height: 100%;
+}
+
+.card-login.p-card .p-card-body {
+  padding: 0;
+  height: 100%;
 }
 
 ::-webkit-scrollbar {
@@ -75,22 +134,22 @@ body,
   min-height: 100vh;
 }
 
-.initial-container{
+.initial-container {
   flex: 1;
   display: flex;
   flex-direction: column;
 }
 
 .footer {
-  flex-shrink: 0; /* Esto asegura que el footer no se comprima */
-  color: white; /* Color del texto del footer */
-  text-align: center;
-  padding: 10px 0 !important; /* Ajusta el padding según tus necesidades */
+  flex-shrink: 0;
+  padding: 10px 0 !important;
 }
 
 .menubarcustom {
-  background-image: url('./assets/image/rojopasi.jpg');
-  /* O ajusta según tus preferencias */
+  background-image: url('./assets/image/barra.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   border-radius: 0;
   color: #ffffff;
 }
@@ -156,6 +215,7 @@ body,
   padding: 1rem;
 }
 
+
 .img-height-tarjeta {
   height: 30px;
 }
@@ -170,7 +230,7 @@ body,
 }
 
 .tarjeta.p-card {
-  background-image: url('./assets/image/rojopasi.jpg');
+  background-image: url('./assets/image/card.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -179,22 +239,25 @@ body,
 }
 
 .text-card1 {
-  font: normal normal bold 25px/17px Proxima Nova;
-  letter-spacing: 0.75px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+  font: normal normal bold 32px/22px Proxima Nova;
+  letter-spacing: 0.96px;
   color: #FFFFFF;
   text-shadow: 0px 2px 2px #121D3742;
 }
 
 .text-card2 {
-  font: normal normal normal 22px/30px IF Kica;
-  letter-spacing: 2.2px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+  font: normal normal normal 28px/38px Helvetica Neue;
+  letter-spacing: 2.8px;
   color: #FFFFFF;
   text-shadow: 0px 2px 2px #121D3742;
 }
 
 .text-card3 {
-  font: normal normal bold 9px/17px Proxima Nova;
-  letter-spacing: 0.27px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+  font: normal normal bold 11px/21px Proxima Nova;
+  letter-spacing: 0.33px;
   color: #FFFFFF;
   text-shadow: 0px 2px 2px #121D3742;
 }
@@ -210,7 +273,7 @@ body,
 
 @media screen and (max-width: 960px) {
   .p-menubar .p-menubar-button {
-    display: none;    
+    display: none;
   }
 }
 
@@ -226,3 +289,23 @@ body,
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
 }
+
+.titulo-login {
+  font: normal normal bold 30px/36px Helvetica Neue;
+  letter-spacing: 0px;
+  color: #121D37;
+}
+
+.subtitulo-login {
+  font: normal normal normal 15px/17px Helvetica Neue;
+  letter-spacing: 0px;
+  color: #707070;
+}
+
+.text-condiciones {
+  transform: matrix(1, 0, 0, 1, 0, 0);
+  font: normal normal 300 13px/17px Calibri;
+  letter-spacing: 0px;
+  color: #918E8D;
+}
+
