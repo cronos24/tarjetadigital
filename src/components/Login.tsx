@@ -1,7 +1,7 @@
 
 
 import { Card } from 'primereact/card';
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { InputText } from "primereact/inputtext";
 import { Button } from 'primereact/button';
 import { useNavigate } from 'react-router-dom';
@@ -13,6 +13,12 @@ const Login = () => {
     const [condiciones, setCondiciones] = useState<boolean>(false);
     const [value, setValue] = useState<string>('');
     const navigate = useNavigate();
+    const inputRef = useRef<HTMLInputElement>(null);
+    useEffect(() => {
+        if (inputRef.current) {
+          inputRef.current?.focus();
+        }
+      }, []);
     const validate = (event: React.KeyboardEvent<HTMLInputElement>) => {
         const regex = /^[a-zA-Z0-9]+$/;
         if (event.key.length === 1 && !regex.test(event.key)) {
@@ -52,7 +58,7 @@ const Login = () => {
                                     <div className='col-12 text-xl font-bold lg:text-4xl flex align-items-center justify-content-center text-center'><span className='titulo-login'>Consulta <br /> el saldo de tu tarjeta digital</span></div>
                                     <div className='col-12 pt-2 text-sm lg:text-base flex align-items-center justify-content-center'><span className='subtitulo-login'>Ingresa aquí el número de tu placa</span></div>
                                     <div className='col-12 flex align-items-center justify-content-center'>
-                                        <InputText value={value} className='w-6 h-5rem md:w-4 lg:w-4 lg:h-4rem text-4xl text-center' style={{ backgroundColor: '#FFBF2A', border: '1px solid #E0E0E0', color: '#121D37', font: 'normal normal bold 25px/30px Helvetica Neue' }} onChange={handleChange}
+                                        <InputText value={value} ref={inputRef} className='w-6 h-5rem md:w-4 lg:w-4 lg:h-4rem text-4xl text-center' style={{ backgroundColor: '#FFBF2A', border: '1px solid #E0E0E0', color: '#121D37', font: 'normal normal bold 25px/30px Helvetica Neue' }} onChange={handleChange}
                                             onKeyPress={validate}
                                             maxLength={6} />
                                     </div>

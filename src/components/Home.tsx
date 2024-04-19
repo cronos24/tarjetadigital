@@ -5,15 +5,21 @@ import imMoneda from "../assets/image/moneda.png";
 import imLogoTarjeta from "../assets/image/logo.svg";
 import imChip from "../assets/image/chip.png";
 import { Divider } from 'primereact/divider';
+import { useRef, useEffect } from 'react';
 
 const Home = () => {
+    const welcomeRef  = useRef<HTMLInputElement>(null);
+
+    useEffect(() => {
+        welcomeRef.current?.focus();
+      }, []);
 
     return (
         <div className='w-full px-3 md:px-8 lg:px-8 pt-5 pb-8'>
             <Card className='p-0 border-round-3xl'>
                 <div className="grid">
                     <div className="col-12 p-5 pb-0">
-                        <span className='text-titulo flex justify-content-center align-content-center'><span className='wellcome'>¡Bienvenido!</span></span>
+                        <span className='text-titulo flex justify-content-center align-content-center'><span className='wellcome' ref={welcomeRef} tabIndex={-1}>¡Bienvenido!</span></span>
                         <p className='text-subtitulo flex justify-content-center align-content-center text-center'>Conozca los beneficios exclusivos que tenemos para ti</p>
                     </div>
                     <div className="col-12 md:col-8 md:col-offset-2 lg:col-8 lg:col-offset-2 md:px-5 lg:px-5">
