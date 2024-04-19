@@ -42,8 +42,8 @@ const Login = () => {
                     <Card title="" className='card-login w-full' style={{ border: '1px solid #DBDBDB', borderRadius: '25px' }}>
                         <div className='grid pt-2'>
                             <div className='col-12 md:col-5 lg:col-5 flex align-items-center justify-content-center'>
-                                <div className='p-2 md:p-5 lg:p-5'>
-                                    <img alt="ic_location" src={reindustrias} className='py-3 h-15rem md:h-18rem lg:h-18rem'></img>
+                                <div className='md:p-5 lg:p-5'>
+                                    <img alt="ic_location" src={reindustrias} className='md:py-3 lg:py-3 h-15rem md:h-18rem lg:h-18rem'></img>
                                 </div>
                             </div>
                             <Divider layout="vertical" className='m-0' />
