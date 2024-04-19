@@ -43,7 +43,7 @@ const Login = () => {
                         <div className='grid pt-2'>
                             <div className='col-12 md:col-5 lg:col-5 flex align-items-center justify-content-center'>
                                 <div className='p-5'>
-                                    <img alt="ic_location" src={reindustrias} height="296px" className='py-3'></img>
+                                    <img alt="ic_location" src={reindustrias} className='py-3 h-18rem'></img>
                                 </div>
                             </div>
                             <Divider layout="vertical" className='m-0' />

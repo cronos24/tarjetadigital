@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
             <div className='col-6 lg:col-2 flex align-items-center justify-content-center align-content-center'>
                 <img alt="ic_location" src={ic_location} height="20" className='mr-3'></img>
                 Villavicencio - Meta <br />
-                Carrera 21b No. 8 - 50
+                Cra 21b No. 8 - 50
                 Barrio La Primavera
             </div>
             {/* <Divider layout="vertical" className='m-0 mt-3 footer-divider' /> */}
@@ -34,7 +34,7 @@ const Footer: React.FC = () => {
             <div className='col-12 lg:col-2 flex align-items-center justify-content-center align-content-center'>
                 <img alt="ic_location" src={ic_location} height="20" className='mr-3'></img>
                 Florencia - Caquetá <br />
-                Cra11 No. 14-33 km3 vía aeropuerto <br />
+                Cra 11 No. 14-33 km3 vía aeropuerto <br />
                 Complejo santa elena
             </div>
             <Divider className='m-0 mt-3 footer-divider' style={{ border: '1px solid #313E5D' }} />
