@@ -16,9 +16,9 @@ const Login = () => {
     const inputRef = useRef<HTMLInputElement>(null);
     useEffect(() => {
         if (inputRef.current) {
-          inputRef.current?.focus();
+            inputRef.current?.focus();
         }
-      }, []);
+    }, []);
     const validate = (event: React.KeyboardEvent<HTMLInputElement>) => {
         const regex = /^[a-zA-Z0-9]+$/;
         if (event.key.length === 1 && !regex.test(event.key)) {
@@ -37,7 +37,7 @@ const Login = () => {
 
     const footerContent = (
         <div>
-            <Button label="Ok" icon="pi pi-check" style={{ background: '#121D37'}} onClick={() => setCondiciones(false)} autoFocus />
+            <Button label="Ok" icon="pi pi-check" style={{ background: '#121D37' }} onClick={() => setCondiciones(false)} autoFocus />
         </div>
     );
 
@@ -75,17 +75,17 @@ const Login = () => {
                 </div>
             </div>
 
-            <Dialog header="Términos y condiciones" closable={false}  visible={condiciones} style={{ width: '90%' }} onHide={() => setCondiciones(false)} footer={footerContent}>
+            <Dialog header="Términos y condiciones" closable={false} visible={condiciones} style={{ width: '90%' }} onHide={() => setCondiciones(false)} footer={footerContent}>
                 <p className="m-0">
                     <ol>
-                        <li>Por cada factura realizada de los servicios y productos de Posventa y Serviteca recibe una recarga equivalente al 8% del valor de la compra antes de IVA, con fecha de vigencia de 6 meses y pueden ser redimidos en productos y servicios en los talleres y servitecas.</li>
-                        <li>Por la compra de un vehículo nuevo recibe siete(7) recargas por valor de $30.000 cada una, con fecha de vigencia de 6 meses y pueder ser redimida en los servicios de lavados sencillos, Alineación, Revisión de viaje, o calibraciones en nuestras servitecas.</li>
-                        <li>A nuestros clientes que cumplan 3 años de haber comprado un vehículo de nuestras marcas, recibirá una recarga de $500.000, con fecha de vigencia de 1 año, para la compra de un vehículo nuevo de nuestras marcas. Si la compra que realiza el cliente es de una camioneta se le aumentará el bono a $1.000.000.</li>
-                        <li>Cada recarga debe ser usada en su totalidad en una unica compra, no se puede redimir parcialmente.</li>
-                        <li>Esta plan de fidelización no es acumulable con otras promociones o descuentos y es intransferibles.</li>
+                        <li>Por cada factura realizada de los servicios y productos de Posventa y Serviteca recibe una recarga equivalente al 8% del valor de la compra antes de IVA, con fecha de vigencia de 6 meses y pueden ser redimidos en productos y servicios en los talleres y servitecas en Neiva, Ibagué y Villavicencio.</li>
+                        <li>Por la compra de un vehículo nuevo recibe siete (7) recargas por valor de $30.000 cada una, con fecha de vigencia de 6 meses y puede ser redimida en los servicios: lavado sencillo, Alineación, Revisión de viaje, o calibraciones en nuestras servitecas Neiva, Ibagué y Villavicencio.</li>
+                        <li>A nuestros clientes que cumplan 3 años de haber comprado un vehículo de nuestras marcas, recibirá una recarga de $500.000, con fecha de vigencia de 1 año, para la compra auto nuevo de nuestras marcas. Si la compra que realiza el cliente es de una camioneta se otorgará un bono a $1.000.000.</li>
+                        <li>Cada recarga debe ser usada en su totalidad en una única compra, no se puede redimir parcialmente.</li>
+                        <li>Este plan de fidelización no es acumulable con otras promociones o descuentos y es intransferibles.</li>
                         <li>Todas las recargas se aplican a una placa y no se podrá redimir en otros vehículos.</li>
                         <li>Para redimir cada recarga, se cobrará un valor de $5.000 por cada recargar redimida.</li>
-                        <li>El cliente debe agendar al call center +(57) 333 6025 006</li>
+                        <li>El cliente debe agendar al call center +(57) 333 6025 006.</li>
                         <li>No es redimible en dinero.</li>
                     </ol>
                 </p>
