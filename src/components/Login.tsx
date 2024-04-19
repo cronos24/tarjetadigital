@@ -42,15 +42,15 @@ const Login = () => {
                     <Card title="" className='card-login w-full' style={{ border: '1px solid #DBDBDB', borderRadius: '25px' }}>
                         <div className='grid pt-2'>
                             <div className='col-12 md:col-5 lg:col-5 flex align-items-center justify-content-center'>
-                                <div className='p-5'>
+                                <div className='p-2 md:p-5 lg:p-5'>
                                     <img alt="ic_location" src={reindustrias} className='py-3 h-15rem md:h-18rem lg:h-18rem'></img>
                                 </div>
                             </div>
                             <Divider layout="vertical" className='m-0' />
                             <div className='col-12 md:col-7 lg:col-7'>
-                                <div className='grid flex flex-column text-black-alpha-90 lg:pt-3'>
+                                <div className='grid flex flex-column text-black-alpha-90 lg:pt-5'>
                                     <div className='col-12 text-xl font-bold lg:text-4xl flex align-items-center justify-content-center text-center'><span className='titulo-login'>Consulta <br /> el saldo de tu tarjeta digital</span></div>
-                                    <div className='col-12 pt-6 text-sm lg:text-base flex align-items-center justify-content-center'><span className='subtitulo-login'>Ingresa aquí el número de tu placa</span></div>
+                                    <div className='col-12 pt-2 text-sm lg:text-base flex align-items-center justify-content-center'><span className='subtitulo-login'>Ingresa aquí el número de tu placa</span></div>
                                     <div className='col-12 flex align-items-center justify-content-center'>
                                         <InputText value={value} className='w-6 h-5rem md:w-4 lg:w-4 lg:h-4rem text-4xl text-center' style={{ backgroundColor: '#FFBF2A', border: '1px solid #E0E0E0', color: '#121D37', font: 'normal normal bold 25px/30px Helvetica Neue' }} onChange={handleChange}
                                             onKeyPress={validate}
