@@ -27,49 +27,16 @@ function App() {
               <Route path="/Home" element={<Home />} />
             </Routes>
           </div>
-        </div>
-
-
-        <footer className="p-grid p-justify-center p-align-center">
+          <footer className="p-grid p-justify-center p-align-center">
             <div className="p-col-12 p-0 footer">
                  <Footer />
             </div>
         </footer>
+        </div>
+
+
+       
       </BrowserRouter>
-      {/* <div className="page-container">
-        <BrowserRouter>
-          <header classNameName="header">
-            <NavigationBar />
-          </header>
-
-  
-          <main classNameName="content">
-            <Routes>
-              <Route path="/" element={<Login />} />
-              <Route path="/Home" element={<Home />} />
-            </Routes>
-          </main>
-        </BrowserRouter>
-
-        <Footer />
-      </div> */}
-
-      {/* <div className='grid w-full p-0 initial-container'>
-
-        <BrowserRouter>
-          <div className='col-12 p-0'>
-            <NavigationBar />
-          </div>
-          <div className='col-12 flex-grow-1'>
-            <Routes>
-              <Route path="/" element={<Login />} />
-              <Route path="/Home" element={<Home />} />
-            </Routes>
-          </div>
-        </BrowserRouter>
-        <Footer />
-
-      </div> */}
     </>
   )
 }
