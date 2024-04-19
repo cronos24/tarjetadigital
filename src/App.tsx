@@ -14,24 +14,46 @@ function App() {
 
   return (
     <>
+      <BrowserRouter>
+        <div className="p-grid p-justify-between p-align-center p-p-3 p-shadow-2">
+          <NavigationBar />
+        </div>
 
-      <div className="page-container"> {/* Contenedor principal con flexbox */}
+
+        <div className="content p-grid p-dir-col">
+          <div className="p-col">
+            <Routes>
+              <Route path="/" element={<Login />} />
+              <Route path="/Home" element={<Home />} />
+            </Routes>
+          </div>
+        </div>
+
+
+        <footer className="p-grid p-justify-center p-align-center">
+            <div className="p-col-12 p-0 footer">
+                 <Footer />
+            </div>
+        </footer>
+      </BrowserRouter>
+      {/* <div className="page-container">
         <BrowserRouter>
-          <header className="header">
+          <header classNameName="header">
             <NavigationBar />
           </header>
 
-          {/* Contenido Principal */}
-          <main className="content">
+  
+          <main classNameName="content">
             <Routes>
               <Route path="/" element={<Login />} />
               <Route path="/Home" element={<Home />} />
             </Routes>
           </main>
         </BrowserRouter>
-        {/* Footer */}
+
         <Footer />
-      </div>
+      </div> */}
+
       {/* <div className='grid w-full p-0 initial-container'>
 
         <BrowserRouter>
