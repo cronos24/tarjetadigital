@@ -320,7 +320,7 @@ footer {
   color: #918E8D;
 }
 
-@media (min-width: 1366px) and (max-width:1600px)   {
+@media (min-width: 1366px) and (max-width:1600px) {
 
   .sm-xl\:col-10 {
     flex: 0 0 auto;
@@ -332,14 +332,28 @@ footer {
     margin-left: 8.3333% !important;
   }
 
+  .sm-xl\:col-8 {
+    flex: 0 0 auto;
+    padding: 0.5rem;
+    width: 66.6667%;
+  }
+
+  .sm-xl\:col-offset-2 {
+    margin-left: 16.6667% !important;
+  }
+
   .sm-xl\:w-5 {
     width: 41.6667% !important;
-  } 
+  }
+
+  .lg-xl\:h-14rem {
+    height: 14rem !important;
+  }
 
 }
 
 
-@media (min-width: 768px) and (max-width: 1365px){
+@media (min-width: 768px) and (max-width: 1365px) {
 
   .md-xl\:col-12 {
     flex: 0 0 auto;
@@ -352,6 +366,3 @@ footer {
   }
 
 }
-
-
-
