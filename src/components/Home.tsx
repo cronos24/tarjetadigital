@@ -9,7 +9,7 @@ import { Divider } from 'primereact/divider';
 const Home = () => {
 
     return (
-        <div className='w-full px-8 pt-5 pb-8'>
+        <div className='w-full px-3 md:px-8 lg:px-8 pt-5 pb-8'>
             <Card className='p-0 border-round-3xl'>
                 <div className="grid">
                     <div className="col-12 p-5 pb-0">
