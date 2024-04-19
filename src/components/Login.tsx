@@ -44,7 +44,7 @@ const Login = () => {
     return (
         <div className='w-full p-3'>
             <div className="grid">
-                <div className='col-12 md:col-6 md:col-offset-3 lg:col-6 lg:col-offset-3 flex justify-content-center align-content-center lg:pt-8'>
+                <div className='col-12 md-xl:col-12 md-xl:col-offset-0 md:col-6 md:col-offset-3 lg:col-6 lg:col-offset-3 flex justify-content-center align-content-center lg:pt-8'>
                     <Card title="" className='card-login w-full' style={{ border: '1px solid #DBDBDB', borderRadius: '25px' }}>
                         <div className='grid pt-2'>
                             <div className='col-12 md:col-5 lg:col-5 flex align-items-center justify-content-center'>
