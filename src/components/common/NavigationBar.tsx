@@ -65,7 +65,7 @@ const NavigationBar = () => {
         <div className="flex align-items-center gap-2">
             {isHomeRoute ? (
                 <>
-                <Button icon="pi pi-bell" rounded text severity="warning" aria-label="Notification" className='p-button p-component p-button-icon-only p-button-text p-button-rounded p-button-warning' badge="8" onClick={() => setVisibleRight(true)} />
+                {/* <Button icon="pi pi-bell" rounded text severity="warning" aria-label="Notification" className='p-button p-component p-button-icon-only p-button-text p-button-rounded p-button-warning' badge="8" onClick={() => setVisibleRight(true)} /> */}
                 <Button icon="pi pi-power-off" rounded text severity="warning" aria-label="Notification" className='p-button p-component p-button-icon-only p-button-text p-button-rounded p-button-warning' onClick={() => logOut()} />
                 </>
             ) : (

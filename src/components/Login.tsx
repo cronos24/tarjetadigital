@@ -52,12 +52,12 @@ const Login = () => {
                                     <div className='col-12 text-xl font-bold lg:text-4xl flex align-items-center justify-content-center text-center'><span className='titulo-login'>Consulta <br /> el saldo de tu tarjeta digital</span></div>
                                     <div className='col-12 pt-6 text-sm lg:text-base flex align-items-center justify-content-center'><span className='subtitulo-login'>Ingresa aquí el número de tu placa</span></div>
                                     <div className='col-12 flex align-items-center justify-content-center'>
-                                        <InputText value={value} className='w-6 h-5rem lg:w-4 lg:h-4rem text-4xl text-center' style={{ backgroundColor: '#FFBF2A', border: '1px solid #E0E0E0', color: '#121D37', font: 'normal normal bold 25px/30px Helvetica Neue' }} onChange={handleChange}
+                                        <InputText value={value} className='w-6 h-5rem md:w-4 lg:w-4 lg:h-4rem text-4xl text-center' style={{ backgroundColor: '#FFBF2A', border: '1px solid #E0E0E0', color: '#121D37', font: 'normal normal bold 25px/30px Helvetica Neue' }} onChange={handleChange}
                                             onKeyPress={validate}
                                             maxLength={6} />
                                     </div>
                                     <div className='col-12 lg:pt-2 flex align-items-center justify-content-center'>
-                                        <Button label="VERIFICAR" onClick={handleSearchClick} className='w-4' style={{ backgroundColor: '#121D37', height: '50px' }} />
+                                        <Button label="VERIFICAR" onClick={handleSearchClick} className='w-5 md:w-4 lg:w-4' style={{ backgroundColor: '#121D37', height: '50px' }} />
                                     </div>
                                     <div className='col-12 flex align-items-center justify-content-center'>
                                         <span className='text-condiciones' style={{ cursor: 'pointer' }} onClick={() => setCondiciones(true)}>*Aplican términos y condiciones*</span>
