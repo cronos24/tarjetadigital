@@ -353,7 +353,7 @@ footer {
 }
 
 
-@media (min-width: 768px) and (max-width: 1365px) {
+@media (min-width: 768px) and (max-width: 1279px) {
 
   .md-xl\:col-12 {
     flex: 0 0 auto;

@@ -44,12 +44,12 @@ const Login = () => {
     return (
         <div className='w-full p-3'>
             <div className="grid">
-                <div className='col-12 md-xl:col-12 md-xl:col-offset-0 md:col-6 md:col-offset-3 lg:col-6 lg:col-offset-3 flex justify-content-center align-content-center lg:pt-8'>
+                <div className='col-12 md-xl:col-12 md-xl:col-offset-0 md:col-6 md:col-offset-3 lg:col-8 lg:col-offset-2 flex justify-content-center align-content-center lg:pt-8'>
                     <Card title="" className='card-login w-full' style={{ border: '1px solid #DBDBDB', borderRadius: '25px' }}>
                         <div className='grid pt-2'>
                             <div className='col-12 md-xl:col-12 md:col-5 lg:col-5 flex align-items-center justify-content-center'>
                                 <div className='md:p-5 lg:p-5'>
-                                    <img alt="ic_location" src={reindustrias} className='md:py-3 lg:py-3 h-15rem lg-xl:h-14rem md:h-18rem lg:h-18rem'></img>
+                                    <img alt="ic_location" src={reindustrias} className='md:py-3 lg:py-3 h-15rem lg-xl:h-14rem md:h-18rem lg:h-18rem xl:h-18'></img>
                                 </div>
                             </div>
                             <Divider layout="vertical" className='m-0' />
