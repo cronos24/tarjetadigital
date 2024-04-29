@@ -22,7 +22,7 @@ const Home = () => {
                         <span className='text-titulo flex justify-content-center align-content-center'><span className='wellcome' ref={welcomeRef} tabIndex={-1}>¡Bienvenido!</span></span>
                         <p className='text-subtitulo flex justify-content-center align-content-center text-center'>Conozca los beneficios exclusivos que tenemos para ti</p>
                     </div>
-                    <div className="col-12 sm-xl:col-10 sm-xl:col-offset-1 md:col-8 md:col-offset-2 md-xl:col-8 md:col-offset-2 lg:col-8 lg:col-offset-2 md:px-5 lg:px-5">
+                    <div className="col-12 md2:col-12 lg-xl:col-10 lg-xl:col-offset-1 sm-xl:col-10 sm-xl:col-offset-1 md:col-8 md:col-offset-2 md-xl:col-8 md:col-offset-2 lg:col-8 lg:col-offset-2 md:px-5 lg:px-5">
                         <div className='grid'>
                             <div className='col-12 md-xl:col-12 md:col-4 lg:col-4'>
                                 <Card title="" className='card-items pl-2' style={{ background: '#121D37 0% 0% no-repeat padding-box', border: '1px solid #2D457F', borderRadius: '10px', color: '#ffffff', height: '40px' }}>
@@ -52,7 +52,7 @@ const Home = () => {
 
                     </div>
                     <div className='col-12 md::px-5 lg:px-5 flex justify-content-center align-content-center lg:pt-5'>
-                        <Card title="" className='w-11 sm:w-11 sm-xl:w-5 md:w-8 lg:w-3 h-16rem md:h-18rem lg:h-18rem tarjeta'>
+                        <Card title="" className='w-11 sm:w-11 sm-xl:w-5 md:w-8 lg:w-3 lg-xl:w-5 h-16rem md:h-18rem lg:h-18rem tarjeta'>
                             <div className='grid pb-3 md:px-4 lg:px-4 h-full min-h-full'>
                                 <div className='col-12 flex justify-content-star align-items-center' style={{ height: '30%' }}><img alt="logotarjeta" src={imLogoTarjeta} className='img-height-tarjeta'></img></div>
 

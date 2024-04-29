@@ -366,3 +366,20 @@ footer {
   }
 
 }
+
+@media (min-width: 1280px) and (max-width: 1365px) {
+
+  .lg-xl\:col-10 {
+    flex: 0 0 auto;
+    padding: 0.5rem;
+    width: 83.3333%;
+  }
+
+  .lg-xl\:col-offset-1 {
+    margin-left: 8.3333% !important;
+  }
+
+  .lg-xl\:w-5 {
+    width: 41.6667% !important;
+  }
+}
