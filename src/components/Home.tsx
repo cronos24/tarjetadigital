@@ -5,10 +5,9 @@ import imMoneda from "../assets/image/moneda.png";
 import imLogoTarjeta from "../assets/image/logo.svg";
 import imChip from "../assets/image/chip.png";
 import { Divider } from 'primereact/divider';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import LoadingOverlay from './common/LoadingOverlay';
-import { useUpdateEffect } from 'primereact/hooks';
 import axios from 'axios';
 import { Message } from 'primereact/message';
 
@@ -55,13 +54,11 @@ const Home = () => {
     const [loading, setLoading] = useState<boolean>(false);
     const [datos, setDatos] = useState<CampaignObject | null>(null);
 
-    useUpdateEffect(() => {
+    useEffect(() => {
         console.log(placa);
         welcomeRef.current?.focus();
         fetchData();
     }, [placa]);
-
-
 
     const fetchData = async () => {
         setLoading(true);
