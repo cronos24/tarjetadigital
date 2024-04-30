@@ -13,11 +13,12 @@ import { useLocation } from 'react-router-dom';
 import imMoneda from "../../assets/image/moneda.png";
 import { useNavigate } from 'react-router-dom';
 
+
 const NavigationBar = () => {
     const [visibleRight, setVisibleRight] = useState<boolean>(false);
     const msgs = useRef<Messages>(null);
     const location = useLocation();
-    const isHomeRoute = location.pathname === '/Home';
+    const isHomeRoute = location.pathname.includes('/Home/');
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const itemRenderer = function (item: any) {
         return (

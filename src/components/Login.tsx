@@ -8,6 +8,7 @@ import { useNavigate } from 'react-router-dom';
 import { Divider } from 'primereact/divider';
 import reindustrias from "../assets/image/reindustrias.png";
 import { Dialog } from 'primereact/dialog';
+import { ConfirmDialog, confirmDialog } from 'primereact/confirmdialog';
 
 const Login = () => {
     const [condiciones, setCondiciones] = useState<boolean>(false);
@@ -31,8 +32,13 @@ const Login = () => {
             setValue(val.slice(0, 6));
         }
     };
-    const handleSearchClick = () => {
-        navigate('/Home');
+    const handleSearchClick = () => {       
+
+        if (value) { // Asegurarse de que `value` no esté vacío
+            navigate(`/Home/${value}`);
+        } else {          
+            confirm1();
+        }
     };
 
     const footerContent = (
@@ -41,10 +47,20 @@ const Login = () => {
         </div>
     );
 
+
+    const confirm1 = () => {
+        confirmDialog({
+            message: 'Por favor ingresa el número de placa antes de verificar.',
+            header: 'Error',
+            icon: 'pi p-inline-message-icon',       
+        });
+    };
+
     return (
         <div className='w-full p-3'>
             <div className="grid">
                 <div className='col-12 md-xl:col-12 md-xl:col-offset-0 md:col-6 md:col-offset-3 lg:col-8 lg:col-offset-2 flex justify-content-center align-content-center lg:pt-8'>
+                    
                     <Card title="" className='card-login w-full' style={{ border: '1px solid #DBDBDB', borderRadius: '25px' }}>
                         <div className='grid pt-2'>
                             <div className='col-12 md-xl:col-12 md:col-5 lg:col-5 flex align-items-center justify-content-center'>
@@ -66,7 +82,7 @@ const Login = () => {
                                         <Button label="VERIFICAR" onClick={handleSearchClick} className='w-5 md:w-4 lg:w-4' style={{ backgroundColor: '#121D37', height: '50px' }} />
                                     </div>
                                     <div className='col-12 flex align-items-center justify-content-center'>
-                                        <span className='text-condiciones' style={{ cursor: 'pointer' }} onClick={() => setCondiciones(true)}>*Aplican términos y condiciones*</span>
+                                        <span className='text-condiciones' style={{ cursor: 'pointer', textDecoration:'underline' }} onClick={() => setCondiciones(true)}>*Aplican términos y condiciones*</span>
                                     </div>
                                 </div>
                             </div>
@@ -74,6 +90,32 @@ const Login = () => {
                     </Card>
                 </div>
             </div>
+
+            <ConfirmDialog
+                content={({ headerRef, contentRef, footerRef, hide, message }) => (
+                    <div className="flex flex-column align-items-center p-5 surface-overlay border-round">
+                        <div className="border-circle bg-yellow-300 inline-flex justify-content-center align-items-center h-6rem w-6rem -mt-8">
+                            <i className="pi pi-info text-5xl"></i>
+                        </div>
+                        <span className="font-bold text-2xl block mb-2 mt-4" ref={headerRef as React.Ref<HTMLSpanElement>}>
+                            {message.header}
+                        </span>
+                        <p className="mb-0" ref={contentRef as React.Ref<HTMLParagraphElement>}>
+                            {message.message}
+                        </p>
+                        <div className="flex align-items-center gap-2 mt-4" ref={footerRef as React.Ref<HTMLDivElement>}>
+                            <Button
+                                label="Ok"
+                                outlined
+                                onClick={(event) => {
+                                    hide(event);
+                                }}
+                                className="w-8rem"
+                            ></Button>
+                        </div>
+                    </div>
+                )}
+            />
 
             <Dialog header="Términos y condiciones" closable={false} visible={condiciones} style={{ width: '90%' }} onHide={() => setCondiciones(false)} footer={footerContent}>
                 <p className="m-0">

@@ -320,6 +320,20 @@ footer {
   color: #918E8D;
 }
 
+.loading-overlay.p-dialog {
+  border-radius: 6px;
+  box-shadow: 0 1px 3px transparent;
+  border: 0 none;
+}
+
+.bg-custom {
+  color: #ffffff;
+  background-image: url('./assets/image/barra.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
 @media (min-width: 1366px) and (max-width:1600px) {
 
   .sm-xl\:col-10 {

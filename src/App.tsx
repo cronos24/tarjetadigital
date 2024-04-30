@@ -24,7 +24,7 @@ function App() {
           <div className="p-col">
             <Routes>
               <Route path="/" element={<Login />} />
-              <Route path="/Home" element={<Home />} />
+              <Route path="/Home/:placa" element={<Home />} />
             </Routes>
           </div>
           <footer className="p-grid p-justify-center p-align-center">
