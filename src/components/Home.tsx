@@ -10,7 +10,8 @@ import { useParams } from 'react-router-dom';
 import LoadingOverlay from './common/LoadingOverlay';
 import axios from 'axios';
 import { Message } from 'primereact/message';
-
+import { DataTable } from 'primereact/datatable';
+import { Column } from 'primereact/column';
 
 interface CampaignSummary {
     id_campana: string;
@@ -94,21 +95,27 @@ const Home = () => {
         return formatter.format(value);
     };
 
-    function formatNumberMoney(value: number | undefined) {
-        if (value === null || value === undefined) return "—";
-        const formatter = new Intl.NumberFormat('es-CO', {
+  
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    function currencyTemplate(rowData: any, field: string) {
+
+        const numberFormatted = new Intl.NumberFormat('es-CO', {
             style: 'currency',
             currency: 'COP',
-            maximumFractionDigits: 0
-        });
-        return formatter.format(value);
+            minimumFractionDigits: 0
+        }).format(rowData[field]);
+
+        return numberFormatted;
     }
 
-    const fechaTemplate = (fecha: string) => {        
-        const fechaFormatted = fecha?.split('T')[0];
-    
-        return fechaFormatted;
-      };
+    const fechaTemplate = (rowData: CampaignEntry) => {
+
+        const fechaRaw = rowData.fecha_limite_vigencia;
+        const fechaFormatted = fechaRaw?.split('T')[0];
+
+        return <span>{fechaFormatted}</span>;
+    };
+
 
     return (
         <div className='w-full px-3 md:px-8 lg:px-8 pt-5 pb-8'>
@@ -185,9 +192,19 @@ const Home = () => {
                                 </Card>
                             </div>
                             <Divider />
-                            <div className="col-12 md:col-8 md:col-offset-2 md-xl:col-12 md-xl:col-offset-0 lg:col-8 lg:col-offset-2 md:px-5 lg:px-5 flex justify-content-center align-items-center">
+
+                            <div className="col-12 md:col-10 md:col-offset-1 md-xl:col-12 md-xl:col-offset-0 lg:col-10 lg:col-offset-1 md:px-5 lg:px-5 flex justify-content-center align-items-center">
                                 <div className='grid w-full'>
-                                    <div className='col-12 md:col-12 lg:col-12 overflow-x-auto'>
+                                    <div className='col-12'>
+                                        <DataTable stripedRows paginator rows={10} rowsPerPageOptions={[10, 25, 50, 100]} value={datos?.detalle.Entries} className='informacion'>
+                                            <Column field="id_campana" header="Código" ></Column>
+                                            <Column field="campana" header="Campaña" ></Column>
+                                            <Column field="valor_campana" header="Valor" body={(rowData) => currencyTemplate(rowData, 'valor_campana')}></Column>
+                                            <Column field="fecha_limite_vigencia" header="Fecha vigencia" body={fechaTemplate}></Column>
+                                            <Column field="redimido" header="Redimido" ></Column>
+                                        </DataTable>
+                                    </div>
+                                    {/* <div className='col-12 md:col-12 lg:col-12 overflow-x-auto'>
                                         <Card title="" className='card-items' style={{ background: '#121D37 0% 0% no-repeat padding-box', border: '1px solid #2D457F', borderRadius: '10px', color: '#ffffff', minHeight: '36px', fontSize: '14px' }}>
                                             <div className='grid flex flex-column md:flex-row lg:flex-row justify-content-center align-content-center'>
                                                 <div className='col-12 md:col-2 p-0 flex justify-content-star align-items-center'>Código</div>
@@ -200,7 +217,7 @@ const Home = () => {
                                     </div>
                                     <div className='col-12 md:col-12 lg:col-12 pt-0 overflow-x-auto'>
                                         <Card title="" className='card-items' style={{ background: '#E9E9E9 0% 0% no-repeat padding-box', borderRadius: '10px', color: '#121D37', fontSize: '13px', minHeight: '50px' }}>
-                                            {datos?.detalle.Entries.map((item:CampaignEntry, index:number) => (
+                                            {datos?.detalle.Entries.map((item: CampaignEntry, index: number) => (
 
                                                 <div key={index} className='grid py-2 flex flex-column md:flex-row lg:flex-row justify-content-center align-content-center overflow-x-auto'>
                                                     <div className='col-12 md:col-2 lg:col-2 p-0 flex justify-content-star align-items-center overflow-x-auto'>{item.id_campana}</div>
@@ -212,7 +229,7 @@ const Home = () => {
                                             ))}
 
                                         </Card>
-                                    </div>
+                                    </div> */}
                                 </div>
 
                             </div>
