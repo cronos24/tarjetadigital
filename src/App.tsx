@@ -14,7 +14,7 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename="/tarjetadigital">
         <div className="p-grid p-justify-between p-align-center p-p-3 p-shadow-2">
           <NavigationBar />
         </div>
