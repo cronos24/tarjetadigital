@@ -1,9 +1,25 @@
 {
+    "builds": [
+        {
+            "src": "vite.config.ts",
+            "use": "@vercel/static-build",
+            "config": {
+                "distDir": "tarjetadigital"
+            }
+        }
+    ],
     "routes": [
         {
             "src": "/[^.]+",
             "dest": "/",
-            "status": 200 
+            "status": 200
+        },
+        {
+            "handle": "filesystem"
+        },
+        {
+            "src": "/.*",
+            "dest": "/index.html"
         }
     ]
 }
