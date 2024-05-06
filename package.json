@@ -4,10 +4,13 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
+    "dev": "vite --mode development",
+    "build": "tsc && vite build --mode development",
+    "build:dev": "tsc && vite build --mode development",
+    "build:prod": "tsc && vite build --mode production",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview:dev": "vite preview --mode development",
+    "preview:prod": "vite preview --mode production"
   },
   "dependencies": {
     "axios": "^1.6.8",
@@ -19,6 +22,7 @@
     "react-router-dom": "^6.22.3"
   },
   "devDependencies": {
+    "@types/node": "^20.12.9",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
     "@types/react-router-dom": "^5.3.3",
