@@ -1,18 +1,25 @@
 {
-    "routes": [
-        {
-            "src": "/[^.]+",
-            "dest": "/",
-            "status": 200
-        }
-    ],
     "builds": [
-        {
-          "src": "package.json",
-          "use": "@vercel/static-build",
-          "config": {
-            "outputDirectory": "tarjetadigital"
-          }
+      {
+        "src": "package.json",
+        "use": "@vercel/static-build",
+        "config": {
+          "outputDirectory": "tarjetadigital"
         }
-      ]
-}
+      }
+    ],
+    "routes": [
+      {
+        "src": "/tarjetadigital/(.*)",
+        "dest": "/tarjetadigital/$1"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/tarjetadigital/index.html",
+        "status": 200
+      }
+    ],
+    "cleanUrls": true,
+    "trailingSlash": false
+  }
+  
