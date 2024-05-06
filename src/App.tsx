@@ -10,11 +10,26 @@ import Login from './components/Login';
 import Footer from './components/common/Footer';
 
 function App() {
+  const appEnv = import.meta.env.VITE_APP_ENV;
+  let baseName = '';
 
+  switch (appEnv) {
+    case 'Development':
+      baseName = '/tarjetadigital_prueba';
+      break;
+
+    case 'Production':
+      baseName = '/tarjetadigital';
+      break;
+
+    default:
+      baseName = '/tarjetadigital_prueba';
+      break;
+  }
 
   return (
     <>
-      <BrowserRouter basename="/tarjetadigital">
+      <BrowserRouter basename={baseName}>
         <div className="p-grid p-justify-between p-align-center p-p-3 p-shadow-2">
           <NavigationBar />
         </div>
@@ -29,13 +44,13 @@ function App() {
           </div>
           <footer className="p-grid p-justify-center p-align-center">
             <div className="p-col-12 p-0 footer">
-                 <Footer />
+              <Footer />
             </div>
-        </footer>
+          </footer>
         </div>
 
 
-       
+
       </BrowserRouter>
     </>
   )

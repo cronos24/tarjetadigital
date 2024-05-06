@@ -8,15 +8,15 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
   const env = loadEnv(mode, process.cwd())
 
   // Determinar el valor base dependiendo del entorno
-  const base = env.VITE_APP_ENV === 'Development' ? '/tarjetadigital_prueba/' : '/tarjetadigital/';
-  const outDir =  env.VITE_APP_ENV === 'Development' ? 'tarjetadigital_prueba' : 'tarjetadigital';
+  const base = env.VITE_APP_ENV === 'Production' ? '/tarjetadigital/' : '/tarjetadigital_prueba/';
+  const outDir =  env.VITE_APP_ENV === 'Production' ? 'tarjetadigital' : 'tarjetadigital_prueba';
 
   return {
     base: base,
     plugins: [react()],
     build: {
-      outDir: outDir, // Directorio de salida para los archivos de producción
-      assetsDir: 'assets', // Carpeta donde se almacenarán los assets
+      outDir: outDir,
+      assetsDir: 'assets',
       rollupOptions: {
         output: {
           chunkFileNames: 'assets/[name]-[hash].js',
