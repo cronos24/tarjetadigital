@@ -2,7 +2,7 @@
     "routes": [
         {
             "src": "/[^.]+",
-            "dest": "/tarjetadigital/",
+            "dest": "/tarjetadigital_prueba/",
             "status": 200
         }
     ]
