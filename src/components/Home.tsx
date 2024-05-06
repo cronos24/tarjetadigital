@@ -116,6 +116,14 @@ const Home = () => {
         return <span>{fechaFormatted}</span>;
     };
 
+    const fechaFormat = (fecha: string | null) => {
+        if (fecha != null) {
+            const fechaFormatted = fecha?.split('T')[0];
+            return <span>{fechaFormatted}</span>;
+        }
+        
+    };
+
 
     return (
         <div className='w-full px-3 md:px-8 lg:px-8 pt-5 pb-8'>
@@ -143,7 +151,7 @@ const Home = () => {
                                         <Card title="" className='card-items px-2' style={{ background: '#FFFFFF 0% 0% no-repeat padding-box', border: '1px solid #E5E5E5', borderRadius: '10px', height: '40px' }}>
                                             <div className='grid flex justify-content-center align-content-center'>
                                                 <div className='col-6 p-0 flex justify-content-star align-items-center text-card-2-1'>Último Mnto.</div>
-                                                <div className='col-6 p-0 flex justify-content-end align-items-center flex-wrap text-card-2-2'>{datos?.resumen.fecha_ultimo_mnto}</div>
+                                                <div className='col-6 p-0 flex justify-content-end align-items-center flex-wrap text-card-2-2'>{fechaFormat(datos?.resumen.fecha_ultimo_mnto)}</div>
                                             </div>
                                         </Card>
                                     </div>
@@ -151,7 +159,7 @@ const Home = () => {
                                         <Card title="" className='card-items px-2' style={{ background: '#FFFFFF 0% 0% no-repeat padding-box', border: '1px solid #E5E5E5', borderRadius: '10px', height: '40px' }}>
                                             <div className='grid flex justify-content-center align-content-center'>
                                                 <div className='col-6 p-0 flex justify-content-star align-items-center text-card-2-1'>Próximo Mnto.</div>
-                                                <div className='col-6 p-0 flex justify-content-end align-items-center flex-wrap text-card-2-2'>{datos?.resumen.fecha_proximo_mnto}</div>
+                                                <div className='col-6 p-0 flex justify-content-end align-items-center flex-wrap text-card-2-2'>{fechaFormat(datos?.resumen.fecha_proximo_mnto)}</div>
                                             </div>
                                         </Card>
                                     </div>
