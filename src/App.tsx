@@ -23,37 +23,46 @@ function App() {
       break;
 
     default:
-      baseName = '/tarjetadigital_prueba';
+      baseName = '/dist';
       break;
   }
 
   return (
     <>
-      <BrowserRouter basename={baseName}>
-        <div className="p-grid p-justify-between p-align-center p-p-3 p-shadow-2">
-          <NavigationBar />
-        </div>
-
-
-        <div className="content p-grid p-dir-col">
-          <div className="p-col">
-            <Routes>
-              <Route path="/" element={<Login />} />
-              <Route path="/Home/:placa" element={<Home />} />
-            </Routes>
-          </div>
-          <footer className="p-grid p-justify-center p-align-center">
-            <div className="p-col-12 p-0 footer">
-              <Footer />
-            </div>
-          </footer>
-        </div>
-
-
-
-      </BrowserRouter>
+      {baseName === '/dist' ? (
+        <BrowserRouter>
+          <AppContent />
+        </BrowserRouter>
+      ) : (
+        <BrowserRouter basename={baseName}>
+          <AppContent />
+        </BrowserRouter>
+      )}
     </>
   )
+}
+
+function AppContent() {
+  return (
+    <div>
+      <div className="p-grid p-justify-between p-align-center p-p-3 p-shadow-2">
+        <NavigationBar />
+      </div>
+      <div className="content p-grid p-dir-col">
+        <div className="p-col">
+          <Routes>
+            <Route path="/" element={<Login />} />
+            <Route path="/Home/:placa" element={<Home />} />
+          </Routes>
+        </div>
+        <footer className="p-grid p-justify-center p-align-center">
+          <div className="p-col-12 p-0 footer">
+            <Footer />
+          </div>
+        </footer>
+      </div>
+    </div>
+  );
 }
 
 export default App

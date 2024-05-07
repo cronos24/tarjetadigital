@@ -8,21 +8,36 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
   const env = loadEnv(mode, process.cwd())
 
   // Determinar el valor base dependiendo del entorno
-  const base = env.VITE_APP_ENV === 'Production' ? '/tarjetadigital/' : '/tarjetadigital_prueba/';
-  const outDir =  env.VITE_APP_ENV === 'Production' ? 'tarjetadigital' : 'tarjetadigital_prueba';
+  if (env.VITE_APP_ENV != 'Test') {
+    const base = env.VITE_APP_ENV === 'Production' ? '/tarjetadigital/' : '/tarjetadigital_prueba/';
+    const outDir = env.VITE_APP_ENV === 'Production' ? 'tarjetadigital' : 'tarjetadigital_prueba';
 
-  return {
-    base: base,
-    plugins: [react()],
-    build: {
-      outDir: outDir,
-      assetsDir: 'assets',
-      rollupOptions: {
-        output: {
-          chunkFileNames: 'assets/[name]-[hash].js',
-          entryFileNames: 'assets/[name]-[hash].js'
+    return {
+      base: base,
+      plugins: [react()],
+      build: {
+        outDir: outDir,
+        assetsDir: 'assets',
+        rollupOptions: {
+          output: {
+            chunkFileNames: 'assets/[name]-[hash].js',
+            entryFileNames: 'assets/[name]-[hash].js'
+          }
         }
       }
+    };
+  } else {
+    return {
+      plugins: [react()],
+      optimizeDeps: {
+        esbuildOptions: {
+          target: 'esnext',
+        },
+      },
+      build: {
+        target: 'esnext',
+      },
     }
-  };
+  }
+
 });
