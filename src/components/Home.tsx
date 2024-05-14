@@ -71,7 +71,7 @@ const Home = () => {
             
             await axios.get(url + '/' + placa, {
                 headers: {
-                    'X-API-Key': '27d34740-c3d4-1120-2023-b5ba3a62922c111'
+                    'X-API-Key': import.meta.env.VITE_API_KEY
                 }
             })
             .then((response) => {
