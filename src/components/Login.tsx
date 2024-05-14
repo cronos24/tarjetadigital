@@ -32,11 +32,11 @@ const Login = () => {
             setValue(val.slice(0, 6));
         }
     };
-    const handleSearchClick = () => {       
+    const handleSearchClick = () => {
 
         if (value) { // Asegurarse de que `value` no esté vacío
             navigate(`/Home/${value}`);
-        } else {          
+        } else {
             confirm1();
         }
     };
@@ -52,7 +52,7 @@ const Login = () => {
         confirmDialog({
             message: 'Por favor ingresa el número de placa antes de verificar.',
             header: 'Error',
-            icon: 'pi p-inline-message-icon',       
+            icon: 'pi p-inline-message-icon',
         });
     };
 
@@ -60,7 +60,7 @@ const Login = () => {
         <div className='w-full p-3'>
             <div className="grid">
                 <div className='col-12 md-xl:col-12 md-xl:col-offset-0 md:col-6 md:col-offset-3 lg:col-8 lg:col-offset-2 flex justify-content-center align-content-center lg:pt-8'>
-                    
+
                     <Card title="" className='card-login w-full' style={{ border: '1px solid #DBDBDB', borderRadius: '25px' }}>
                         <div className='grid pt-2'>
                             <div className='col-12 md-xl:col-12 md:col-5 lg:col-5 flex align-items-center justify-content-center'>
@@ -82,7 +82,7 @@ const Login = () => {
                                         <Button label="VERIFICAR" onClick={handleSearchClick} className='w-5 md:w-4 lg:w-4' style={{ backgroundColor: '#121D37', height: '50px' }} />
                                     </div>
                                     <div className='col-12 flex align-items-center justify-content-center'>
-                                        <span className='text-condiciones' style={{ cursor: 'pointer', textDecoration:'underline' }} onClick={() => setCondiciones(true)}>*Aplican términos y condiciones*</span>
+                                        <span className='text-condiciones' style={{ cursor: 'pointer', textDecoration: 'underline' }} onClick={() => setCondiciones(true)}>*Aplican términos y condiciones*</span>
                                     </div>
                                 </div>
                             </div>
@@ -120,14 +120,14 @@ const Login = () => {
             <Dialog header="Términos y condiciones" closable={false} visible={condiciones} style={{ width: '90%' }} onHide={() => setCondiciones(false)} footer={footerContent}>
                 <p className="m-0">
                     <ol>
-                        <li>Por cada factura realizada de los servicios y productos de Posventa y Serviteca recibe una recarga equivalente al 8% del valor de la compra antes de IVA, con fecha de vigencia de 6 meses y pueden ser redimidos en productos y servicios en los talleres y servitecas en Neiva, Ibagué y Villavicencio.</li>
+                        <li>Por cada factura realizada de los servicios y productos de Posventa y Serviteca recibe una recarga equivalente al 8% del valor de la compra antes de IVA, si esta compra supera los 2 millones de pesos, la recargá será por un valor de 160 mil pesos. Esta recarga tendrá una fecha de vigencia de 6 meses y pueden ser redimidos en productos y servicios en los talleres y servitecas en Neiva, Ibagué y Villavicencio. No acumulables con otras promociones o servicios.</li>
                         <li>Por la compra de un vehículo nuevo recibe siete (7) recargas por valor de $30.000 cada una, con fecha de vigencia de 6 meses y puede ser redimida en los servicios: lavado sencillo, Alineación, Revisión de viaje, o calibraciones en nuestras servitecas Neiva, Ibagué y Villavicencio.</li>
-                        <li>A nuestros clientes que cumplan 3 años de haber comprado un vehículo de nuestras marcas, recibirá una recarga de $500.000, con fecha de vigencia de 1 año, para la compra auto nuevo de nuestras marcas. Si la compra que realiza el cliente es de una camioneta se otorgará un bono a $1.000.000.</li>
+                        <li>A nuestros clientes que cumplan 3 años de haber adquirido un vehículo de nuestras marcas, recibirá una recarga de $500.000, con fecha de vigencia de 1 año, para la compra de un auto nuevo de nuestras marcas. Si la compra que va a realizar es de una camioneta se otorgará un bono adicional de $500.000.</li>
                         <li>Cada recarga debe ser usada en su totalidad en una única compra, no se puede redimir parcialmente.</li>
-                        <li>Este plan de fidelización no es acumulable con otras promociones o descuentos y es intransferibles.</li>
+                        <li>Este plan de fidelización no es acumulable con otras promociones o descuentos y es intransferible.</li>
                         <li>Todas las recargas se aplican a una placa y no se podrá redimir en otros vehículos.</li>
-                        <li>Para redimir cada recarga, se cobrará un valor de $5.000 por cada recargar redimida.</li>
-                        <li>El cliente debe agendar al call center +(57) 333 6025 006.</li>
+                        <li>Para redimir cada recarga, se cobrará un valor de $5.000 por cada recarga redimida.</li>
+                        <li>El cliente deberá agendar al call center +(57) 333 6025 006.</li>
                         <li>No es redimible en dinero.</li>
                     </ol>
                 </p>
