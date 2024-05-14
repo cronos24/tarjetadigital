@@ -235,32 +235,7 @@ const Home = () => {
                                             <Column field="redimido" header="Redimido" ></Column>
                                         </DataTable>
                                     </div>
-                                    {/* <div className='col-12 md:col-12 lg:col-12 overflow-x-auto'>
-                                        <Card title="" className='card-items' style={{ background: '#121D37 0% 0% no-repeat padding-box', border: '1px solid #2D457F', borderRadius: '10px', color: '#ffffff', minHeight: '36px', fontSize: '14px' }}>
-                                            <div className='grid flex flex-column md:flex-row lg:flex-row justify-content-center align-content-center'>
-                                                <div className='col-12 md:col-2 p-0 flex justify-content-star align-items-center'>Código</div>
-                                                <div className='col-12 md:col-6 p-0 flex justify-content-star align-items-center'>Campaña</div>
-                                                <div className='col-12 md:col-1 lg:col-1 p-0 flex justify-content-star align-items-center'>Valor</div>
-                                                <div className='col-12 md:col-2 p-0 flex justify-content-star align-items-center'>Fecha vigencia</div>
-                                                <div className='col-12 md:col-1 lg:col-1 p-0 flex justify-content-star align-items-center'>Redimido</div>
-                                            </div>
-                                        </Card>
-                                    </div>
-                                    <div className='col-12 md:col-12 lg:col-12 pt-0 overflow-x-auto'>
-                                        <Card title="" className='card-items' style={{ background: '#E9E9E9 0% 0% no-repeat padding-box', borderRadius: '10px', color: '#121D37', fontSize: '13px', minHeight: '50px' }}>
-                                            {datos?.detalle.Entries.map((item: CampaignEntry, index: number) => (
 
-                                                <div key={index} className='grid py-2 flex flex-column md:flex-row lg:flex-row justify-content-center align-content-center overflow-x-auto'>
-                                                    <div className='col-12 md:col-2 lg:col-2 p-0 flex justify-content-star align-items-center overflow-x-auto'>{item.id_campana}</div>
-                                                    <div className='col-12 md:col-6 lg:col-6 p-0 flex justify-content-star align-items-center overflow-x-auto'>{item.campana}</div>
-                                                    <div className='col-12 md:col-1 lg:col-1 p-0 flex justify-content-star align-items-center overflow-x-auto'>{formatNumberMoney(item.valor_campana)}</div>
-                                                    <div className='col-12 md:col-2 lg:col-2 p-0 flex justify-content-star align-items-center overflow-x-auto'>{fechaTemplate(item.fecha_limite_vigencia)}</div>
-                                                    <div className='col-12 md:col-1 lg:col-1 p-0 flex justify-content-star align-items-center overflow-x-auto'>{item.redimido}</div>
-                                                </div>
-                                            ))}
-
-                                        </Card>
-                                    </div> */}
                                 </div>
 
                             </div>
