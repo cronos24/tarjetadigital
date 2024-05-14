@@ -12,6 +12,7 @@ import axios from 'axios';
 import { Message } from 'primereact/message';
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
+import ErrorModal from './common/ErrorModal';
 
 interface CampaignSummary {
     id_campana: string;
@@ -54,9 +55,11 @@ const Home = () => {
     const { placa } = useParams<"placa">();
     const [loading, setLoading] = useState<boolean>(false);
     const [datos, setDatos] = useState<CampaignObject | null>(null);
-
+    const [error, setError] = useState<string | null>(null);
+    const [modalVisible, setModalVisible] = useState<boolean>(false);
+    
     useEffect(() => {
-        console.log(placa);
+        
         welcomeRef.current?.focus();
         fetchData();
     }, [placa]);
@@ -65,15 +68,34 @@ const Home = () => {
         setLoading(true);
         try {
             const url = import.meta.env.VITE_API_URL;
-            const response = await axios.get(url + '/' + placa);
-            const data = response.data;
-            setDatos(data?.Objeto);
-            console.log(data, datos);
+            
+            await axios.get(url + '/' + placa, {
+                headers: {
+                    'X-API-Key': '27d34740-c3d4-1120-2023-b5ba3a62922c111'
+                }
+            })
+            .then((response) => {
+                const data = response.data;
+                setDatos(data?.Objeto);
+                // console.log(data, datos);
+                
+            })
+            .catch((error) => {
+                console.log();
+                setError('Hubo un problema al cargar los datos: '+ error.response.data.Mensaje);
+                setModalVisible(true);
+            });
+            
         } catch (error) {
             console.error('Error al cargar los datos:', error);
         } finally {
             setLoading(false);
         }
+    };
+
+    const handleCloseModal = () => {
+        setModalVisible(false);
+        setError(null);
     };
 
     const content = (
@@ -127,6 +149,7 @@ const Home = () => {
 
     return (
         <div className='w-full px-3 md:px-8 lg:px-8 pt-5 pb-8'>
+            <ErrorModal visible={modalVisible} onClose={handleCloseModal} message={error || ''} />
             {loading ? (
                 <LoadingOverlay visible={loading} />
             ) : (

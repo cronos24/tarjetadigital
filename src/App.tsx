@@ -15,15 +15,15 @@ function App() {
 
   switch (appEnv) {
     case 'Development':
-      baseName = '/tarjetadigital_prueba';
+      baseName = '/tarjetadigital_prueba/';
       break;
 
     case 'Production':
-      baseName = '/tarjetadigital';
+      baseName = '/tarjetadigital/';
       break;
 
     default:
-      baseName = '/dist';
+      baseName = '/dist/';
       break;
   }
 
